@@ -25,6 +25,7 @@ function City() {
   );
 
   const { cityName, emoji, date, notes } = currentCity;
+  console.log(typeof emoji);
 
   if (isLoading) return <Spinner />;
   return (
@@ -32,7 +33,8 @@ function City() {
       <div className={styles.row}>
         <h6>City name</h6>
         <h3>
-          <span>{emoji}</span> {cityName}
+          {/* <span>{emoji}</span> */}
+          {cityName}
         </h3>
       </div>
 
@@ -58,8 +60,10 @@ function City() {
           Check out {cityName} on Wikipedia &rarr;
         </a>
       </div>
-      <BackButton />
-      <div></div>
+
+      <div>
+        <BackButton />
+      </div>
     </div>
   );
 }
